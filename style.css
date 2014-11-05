@@ -1,0 +1,100 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+#slider {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#slider > figure {
+  position: relative;
+  left: 0%;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+  transition: left 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+figure > img {
+  width: 20%;
+  /* 100% / 5 images */
+  float: left;
+}
+
+#controller {
+  position: relative;
+  top: -20px;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  position: relative;
+  top: 0px;
+  cursor: pointer;
+}
+
+label:active {
+  top: 1px;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Controller */
+input[type=radio]#button1:checked ~ #slider label[for=button1] {
+  background: #000;
+}
+
+input[type=radio]#button2:checked ~ #slider label[for=button2] {
+  background: #000;
+}
+
+input[type=radio]#button3:checked ~ #slider label[for=button3] {
+  background: #000;
+}
+
+input[type=radio]#button4:checked ~ #slider label[for=button4] {
+  background: #000;
+}
+
+input[type=radio]#button5:checked ~ #slider label[for=button5] {
+  background: #000;
+}
+
+input[type=radio]#button1:checked ~ #slider > figure {
+  left: 0%;
+}
+
+input[type=radio]#button2:checked ~ #slider > figure {
+  left: -100%;
+}
+
+input[type=radio]#button3:checked ~ #slider > figure {
+  left: -200%;
+}
+
+input[type=radio]#button4:checked ~ #slider > figure {
+  left: -300%;
+}
+
+input[type=radio]#button5:checked ~ #slider > figure {
+  left: -400%;
+}
